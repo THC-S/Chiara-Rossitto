@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chiara Rossitto - Psicologa</title>
+    <style>
+        :root {
+            --azzurro: #4da6ff;
+            --verde: #33cc33;
+            --aqua: #66ffff;
+            --giallo: #ffeb99;
+            --arancione: #ffd999;
+            --sfondo: #fafafa;
+            --testo: #333;
+        }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            /* animazione sfondo dinamico con tutte le tonalità richieste */
+            background: linear-gradient(135deg, var(--azzurro), var(--verde), var(--aqua), var(--giallo), var(--arancione));
+            background-size: 400% 400%;
+            animation: gradientBG 30s ease infinite;
+            color: var(--testo);
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(135deg, var(--azzurro), var(--verde));
+            color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 0 0 50px 50px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            animation: textPop 1s ease-out;
+        }
+        header p {
+            font-size: 1.2rem;
+            animation: textPop 1.2s ease-out;
+        }
+        nav {
+            background: var(--aqua);
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 6px 0;
+            border-radius: 0 0 20px 20px;
+            max-width: 90%;
+            margin: auto;
+        }
+        nav a {
+            color: var(--testo);
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.2s, color 0.2s;
+            opacity: 0;
+            animation: navFade 1s ease forwards;
+            background: rgba(255,255,255,0.6);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        nav a:hover {
+            transform: scale(1.1);
+            color: var(--aqua);
+            text-shadow: 0 0 5px rgba(0,0,0,0.2);
+        }
+        section {
+            padding: 40px 20px;
+            max-width: 800px;
+            margin: auto;
+            opacity: 0;
+            animation: fadeIn 1s ease forwards;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .cta {
+            background: var(--giallo);
+            padding: 20px;
+            text-align: center;
+            border-radius: 12px;
+            margin: 20px 0;
+            animation: pulse 2s infinite;
+        }
+        .cta a {
+            color: var(--testo);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        footer {
+            background: var(--azzurro);
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* animazioni chiave */
+        @keyframes gradientBG {
+            0%{background-position:0% 50%;}
+            50%{background-position:100% 50%;}
+            100%{background-position:0% 50%;}
+        }
+        @keyframes slideIn {
+            from {transform: translateY(-20px); opacity:0;}
+            to {transform: translateY(0); opacity:1;}
+        }
+        @keyframes fadeIn {
+            to {opacity:1;}
+        }
+        @keyframes pulse {
+            0%,100%{transform: scale(1);} 
+            50%{transform: scale(1.05);} 
+        }
+        @keyframes textPop {
+            from {opacity:0; transform: scale(0.8);} 
+            to {opacity:1; transform: scale(1);} 
+        }
+        @keyframes navFade {
+            from {opacity:0; transform: translateY(-10px);} 
+            to {opacity:1; transform: translateY(0);} 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Chiara Rossitto</h1>
+        <p>Psicologa clinica - Laureata in Psicologia con Master</p>
+    </header>
+    <nav>
+        <a href="#about">Chi sono</a>
+        <a href="#servizi">Servizi</a>
+        <a href="#contatti">Contatti</a>
+    </nav>
+    <section id="about">
+        <h2>Benvenuto</h2>
+        <p>Sono la dott.ssa Chiara Rossitto, psicologa clinica con una solida formazione e un master in ambito psicoterapeutico. Ho deciso di aprire il mio studio per offrire un ambiente accogliente e professionale dove poter lavorare sul benessere mentale dei miei pazienti.</p>
+    </section>
+    <section id="servizi">
+        <h2>Servizi offerti</h2>
+        <ul>
+            <li>Colloqui individuali</li>
+            <li>Consulenza e supporto psicologico</li>
+            <li>Percorsi terapeutici personalizzati</li>
+            <li>Minori, adolescenti e adulti</li>
+        </ul>
+    </section>
+    <section class="cta">
+        <p>Per prenotare un appuntamento o richiedere informazioni, contattami via email:</p>
+        <p><a href="mailto:rossittochiara@gmail.com">rossittochiara@gmail.com</a></p>
+    </section>
+    <section id="contatti">
+        <h2>Contatti</h2>
+        <p>Email: <a href="mailto:rossittochiara@gmail.com">rossittochiara@gmail.com</a></p>
+        <p>Studio privato in Roma (indirizzo disponibile su richiesta)</p>
+    </section>
+    <footer>
+        <p>&copy; 2026 Chiara Rossitto - Psicologa. Tutti i diritti riservati.</p>
+    </footer>
+</body>
+</html>
